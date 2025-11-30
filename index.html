@@ -693,7 +693,8 @@
     stroke-width="2"
     stroke-linecap="round"
   />
-</svg></div>
+</svg>
+</div>
       <div id="txStatus" class="status-pending">Pending</div>
     </div>
 
@@ -701,8 +702,8 @@
     <div id="txFiat" style="color:#666;margin-bottom:16px;">$0.00</div>
 
     <div style="background:#f3f3f3;border-radius:12px;padding:12px;margin-bottom:12px;">
-      <div class="tx-row"><span>Timestamp</span><span id="txTime">-</span></div>
-           <div class="tx-row"><span>Status</span><span id=>1 of 6</span></div>
+      <div class="tx-row"><span>Date</span><span id="txTime">-</span></div>
+      <div class="tx-row"><span>Status</span><span id=>1 of 6</span></div>
       <div class="tx-row"><span>Recipient</span><span id="txTo">Address</span></div>
     </div>
  <div style="background:#f3f3f3;border-radius:6px;padding:6px;margin-bottom:6px;">
@@ -711,10 +712,13 @@
      <div style="background:#fffff;border-radius:6px;padding:6px;margin-bottom:6px;">
     <div class="tx-row"><span>View on block explorer</span></div>
     </div>
+    
     <button id="txDone" class="action-btn">Done</button>
   </div>
 
 <script>
+function updateTxTime() { const now = new Date(); txTime.textContent = now.toLocaleString(); }
+
 /* ======================================================
    MASTER PORTFOLIO + CONFIG (with user entry prices)
    ====================================================== */
@@ -1117,6 +1121,7 @@ confirmBtn.addEventListener('click', () => {
   // show processing
   hideAllPages();
   processingPopup.style.display = 'flex';
+updateTxTime();
 
   document.body.style.overflow = 'hidden';
 
