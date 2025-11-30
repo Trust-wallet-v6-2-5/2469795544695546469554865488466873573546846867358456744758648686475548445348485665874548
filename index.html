@@ -674,75 +674,67 @@
     </div>
   </div>
 
-  <!-- TX DETAILS PAGE -->
-  <div id="txDetails" class="page">
-    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;">
-      <div id="txBack" style="cursor:pointer;font-weight:700;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-  <!-- Thin ash arrow pointing left -->
-  <path 
-    d="M10 6 L4 12 L10 18" 
-    fill="none" 
-    stroke="#B2B2B2" 
-    stroke-width="2" 
-    stroke-linecap="round" 
-    stroke-linejoin="round"
-  />
-  <line 
-    x1="4" y1="12" x2="20" y2="12"
-    stroke="#B2B2B2"
-    stroke-width="2"
-    stroke-linecap="round"
-  />
-</svg>
-</div>
-      <div id="txStatus" class="status-pending">Pending</div>
+<!-- TX DETAILS PAGE -->
+<div id="txDetails" class="page">
+
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;">
+    <div id="txBack" style="cursor:pointer;font-weight:700;">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" style="transform:translateY(2px);">
+        <path d="M10 6 L4 12 L10 18" fill="none" stroke="#B2B2B2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <line x1="4" y1="12" x2="20" y2="12" stroke="#B2B2B2" stroke-width="2" stroke-linecap="round"/>
+      </svg>
     </div>
 
-   <div id="txAmount" 
-     style="font-size:20px;font-weight:700;margin-bottom:8px;text-align:center;">
-     0
-</div>
-
-<div id="txFiat" 
-     style="color:#666;margin-bottom:16px;text-align:center;">
-     $0.00
-</div>
-
-    <div style="background:#f3f3f3;border-radius:12px;padding:12px;margin-bottom:12px;">
-      <div class="tx-row"><span>Date</span><span id="txTime">-</span></div>
-      <div class="tx-row"><span>Status<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-  <!-- Ash circle -->
-  <circle cx="16" cy="16" r="12" fill="#B2B2B2"/>
-
-  <!-- White "i" -->
-  <text x="16" y="21" font-size="16" font-family="Arial" fill="#FFFFFF" text-anchor="middle">
-    i
-  </text>
-</svg>
-</span><span id=>1 of 6</span></div>
-      <div class="tx-row"><span>Recipient</span><span id="txTo">Address</span></div>
-    </div>
- <div style="background:#f3f3f3;border-radius:6px;padding:6px;margin-bottom:6px;">
-    <div class="tx-row"><span>Network fee<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-  <!-- Ash circle -->
-  <circle cx="16" cy="16" r="12" fill="#B2B2B2"/>
-
-  <!-- White "i" -->
-  <text x="16" y="21" font-size="16" font-family="Arial" fill="#FFFFFF" text-anchor="middle">
-    i
-  </text>
-</svg>
-</span><span id="txFee">0</span></div>
-    </div>
-     <div style="background:#fffff;border-radius:6px;padding:6px;margin-bottom:6px;">
-   <div id="txExplorer" 
-     style="text-align:center; color:royalblue; font-weight:600; margin-top:20px; cursor:pointer;">
-     View on Block Explorer
-</div>
-    </div>
-    
-    <button id="txDone" class="action-btn">Done</button>
+    <div id="txStatus" class="status-pending">Pending</div>
   </div>
+
+  <div id="txAmount" style="font-size:20px;font-weight:700;margin-bottom:8px;text-align:center;">0</div>
+  <div id="txFiat" style="color:#666;margin-bottom:16px;text-align:center;">$0.00</div>
+
+
+  <div style="background:#f3f3f3;border-radius:12px;padding:12px;margin-bottom:12px;">
+
+    <div class="tx-row"><span>Date</span><span id="txTime">-</span></div>
+
+    <div class="tx-row">
+      <span>
+        Status
+        <svg viewBox="0 0 32 32" style="width:14px;height:14px;transform:translateY(2px);">
+          <circle cx="16" cy="16" r="12" fill="#B2B2B2"/>
+          <text x="16" y="21" font-size="16" font-family="Arial" fill="#FFFFFF" text-anchor="middle">i</text>
+        </svg>
+      </span>
+      <span>1 of 6</span>
+    </div>
+
+    <div class="tx-row">
+      <span>Recipient</span><span id="txTo">Address</span>
+    </div>
+  </div>
+
+
+  <div style="background:#f3f3f3;border-radius:6px;padding:6px;margin-bottom:6px;">
+    <div class="tx-row">
+      <span>
+        Network fee
+        <svg viewBox="0 0 32 32" style="width:14px;height:14px;transform:translateY(2px);">
+          <circle cx="16" cy="16" r="12" fill="#B2B2B2"/>
+          <text x="16" y="21" font-size="16" font-family="Arial" fill="#FFFFFF" text-anchor="middle">i</text>
+        </svg>
+      </span>
+      <span id="txFee">0</span>
+    </div>
+  </div>
+
+
+  <div style="background:#fffff;border-radius:6px;padding:6px;margin-bottom:6px;">
+    <div id="txExplorer" style="text-align:center; color:royalblue; font-weight:600; margin-top:20px; cursor:pointer;">
+      View on Block Explorer
+    </div>
+  </div>
+
+  <button id="txDone" class="action-btn">Done</button>
+</div>
 
 <script>
 function updateTxTime() { const now = new Date(); txTime.textContent = now.toLocaleString(); }
