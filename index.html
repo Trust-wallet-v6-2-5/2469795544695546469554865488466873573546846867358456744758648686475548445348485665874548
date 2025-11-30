@@ -708,16 +708,25 @@
 <!-- TX DETAILS PAGE -->
 <div id="txDetails" class="page">
 
-  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;">
-    <div id="txBack" style="cursor:pointer;font-weight:700;">
-      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" style="transform:translateY(2px);">
-        <path d="M10 6 L4 12 L10 18" fill="none" stroke="#B2B2B2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        <line x1="4" y1="12" x2="20" y2="12" stroke="#B2B2B2" stroke-width="2" stroke-linecap="round"/>
-      </svg>
+ <div style="
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 0;
+    font-weight:600;
+    font-size:18px;
+">
+    <!-- LEFT ARROW -->
+    <div id="txBack" style="cursor:pointer;">←</div>
+
+    <!-- CENTERED TITLE -->
+    <div style="position:absolute; left:50%; transform:translateX(-50%);">
+        Transfer
     </div>
 
+    <!-- STATUS RIGHT -->
     <div id="txStatus" class="status-pending">Pending</div>
-  </div>
+</div>
   
   <div id="txAmount" style="font-size:20px;font-weight:700;margin-bottom:8px;text-align:center;">0</div>
   <div id="txFiat" style="color:#666;margin-bottom:16px;text-align:center;">$0.00</div>
