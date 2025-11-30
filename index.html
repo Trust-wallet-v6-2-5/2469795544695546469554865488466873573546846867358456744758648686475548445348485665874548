@@ -611,8 +611,37 @@
 
     <div style="margin-top:15px;">
       <label>Address or Domain Name</label>
-      <div class="input-wrapper"><input id="sendAddress" type="text" placeholder="Search or Enter" class="input"/><span class="right-icons"><span class="paste">Paste</span> <span class="qr">▣</span></span></div>
-    </div>
+  <div class="input-wrapper">
+  <input id="sendAddress" type="text" placeholder="Search or Enter" class="input"/>
+
+  <span class="right-icons">
+    <span class="paste">Paste</span>
+
+    <!-- Inserted SVG in the center -->
+    <span class="contact-icon" style="display:flex;align-items:center;">
+      <svg width="26" height="26" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="8" cy="7" r="3" fill="blue" />
+        <path d="M4 18c0-3 2-5 4-5s4 2 4 5" fill="blue"/>
+        <rect x="14" y="6" width="6" height="2" rx="1" fill="blue"/>
+        <rect x="14" y="10" width="6" height="2" rx="1" fill="blue"/>
+        <rect x="14" y="14" width="6" height="2" rx="1" fill="blue"/>
+      </svg>
+    </span>
+
+    <span class="qr"><svg width="32" height="32" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- 4 corner brackets -->
+  <path d="M4 7V4h3" stroke="blue" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M20 7V4h-3" stroke="blue" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M4 17v3h3" stroke="blue" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M20 17v3h-3" stroke="blue" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+  <!-- Center horizontal bar -->
+  <rect x="9" y="11" width="6" height="2" rx="1" fill="blue"/>
+</svg>
+</span>
+  </span>
+</div>
 
     <div style="margin-top:15px;">
       <label>Amount</label>
