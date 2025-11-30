@@ -81,6 +81,13 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
+    #txTo {
+  display: inline-block;
+  max-width: 140px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
     /* action button style used for primary actions (royal blue) */
     .action-btn {
       width: 100%;
@@ -683,16 +690,6 @@
         <path d="M10 6 L4 12 L10 18" fill="none" stroke="#B2B2B2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         <line x1="4" y1="12" x2="20" y2="12" stroke="#B2B2B2" stroke-width="2" stroke-linecap="round"/>
       </svg>
-      <div style="
-  width:120px;
-  padding:10px;
-  background:#fffff;
-  border-radius:10px;
-  text-align:center;
-  font-weight:600;
-  color:#000;">
-  Transfer
-</div>
     </div>
 
     <div id="txStatus" class="status-pending">Pending</div>
